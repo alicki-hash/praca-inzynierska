@@ -1,0 +1,49 @@
+@import url('line-awesome/dist/line-awesome/css/line-awesome.min.css');
+
+@media all and (max-width: 1100px) {
+  .list-view.editing .toolbar,
+  .list-view.editing .contact-grid {
+    display: none;
+  }
+}
+
+[theme~="dark"] {
+}
+
+a[highlight] {
+   font-weight: bold;
+  }
+
+.appcontent{
+    box-shadow: var(--lumo-box-shadow-xs);
+}
+
+vaadin-app-layout::part(drawer) {
+  box-shadow: var(--lumo-box-shadow-xs);
+}
+
+vaadin-tab[selected] {
+    background-color: var(--lumo-contrast-5pct);
+}
+
+.pulseIcon{
+animation: pulse 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+.pulseIcon:hover{
+animation: none;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.33);
+  }
+  80%,
+  100% {
+    opacity: 0;
+  }
+}
+
+
+
+
