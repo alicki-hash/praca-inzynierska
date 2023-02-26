@@ -43,6 +43,8 @@ public class DashboardView extends VerticalLayout {
         service.findAllWorkScopes().forEach(workScope -> {
             dataSeries.add(new DataSeriesItem(workScope.getName(),
                     service.sumExpensesByWorkscope(workScope.getName())));
+
+            System.out.println(service.sumExpensesByWorkscope(workScope.getName()) + workScope.getName());
         });
 
         chart.getConfiguration().setSeries(dataSeries);

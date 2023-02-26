@@ -15,12 +15,12 @@ public class WorkScope extends AbstractEntity {
         this.name = name;
     }
 
-    @Formula("select count(e.id) from expense e where e.work_scope_id = id")
-    private int expenseCount;
-
-    public int getExpenseCount() {
-        return expenseCount;
-    }
+//    @Formula("(SELECT count(e.id) from expense as e where e.work_scope_id = e.id)")
+//    private int expenseCount;
+//
+//    public int getExpenseCount() {
+//        return expenseCount;
+//    }
 
     public String getName() {
         return name;

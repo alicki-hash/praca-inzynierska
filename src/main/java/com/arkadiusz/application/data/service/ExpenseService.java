@@ -79,7 +79,7 @@ public class ExpenseService {
         List<Expense> expenses = findAllExpenses("");
 
         for (Expense expense : expenses) {
-            if (expense.getWorkScope().getName() == workScopeName) {
+            if ( workScopeName.equalsIgnoreCase(expense.getWorkScope().getName())) {
                 sum = sum.add(expense.getAmount());
             }
         }
